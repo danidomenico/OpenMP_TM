@@ -91,12 +91,10 @@ void CowichanOpenMP::winnow(IntMatrix matrix, BoolMatrix mask,
   {
 #pragma omp single
     {
-		printf("%s\n", "quick_sort");
       quick_sort(weightedPoints, len);
     }
   }
 #else
-  printf("%s\n", "histogram_sort");
   histogram_sort(weightedPoints, len);
 #endif
 
